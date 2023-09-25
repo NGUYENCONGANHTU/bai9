@@ -37,7 +37,7 @@
     }
 }*/
  // vi dụ code tam giác ngược
- int main ()
+ /*int main ()
  {
      int r, i, j;
      printf("Enter: ");
@@ -48,5 +48,21 @@
          }
          printf("\n");
      }
- }
+ }*/
 // ví dụ: tán gái
+int main() {
+    char answer;
+
+    do {
+        printf("Crush oi , em co yeu anh khong? (y/n): ");
+        scanf(" %c", &answer);
+
+        if (answer == 'y' || answer == 'Y') {
+            printf("Oh,vay la em ko yeu anh a!\n");
+        } else {
+            printf("tao se doi may!\n");
+        }
+    } while (answer != 'y' && answer != 'Y');
+
+    return 0;
+}
