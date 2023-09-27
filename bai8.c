@@ -1,5 +1,8 @@
 // ví dụ 1
 #include "stdio.h"
+/*#define COFFEE_PRICE 2.5
+#define COFFEE_PRICE 2.0
+#define SMOOTHIE_PRICE 3.0*/
 /*int main ()
 {
     int num;
@@ -18,7 +21,7 @@
     scanf("%d", &max);
     for ( i = 0, j = max; i <= max; i++, j--)
     {
-        printf("\n %d + %d = %d", i, j, i + j);
+        printf("\n %d +%d = %d", i, j, i + j);
     }
     return 0;
 }*/
@@ -50,19 +53,64 @@
      }
  }*/
 // ví dụ: tán gái
-int main() {
+/*int main() {
     char answer;
-
+    int count=0;
     do {
         printf("Crush oi , em co yeu anh khong? (y/n): ");
         scanf(" %c", &answer);
-
+        fflush(stdin);
         if (answer == 'y' || answer == 'Y') {
             printf("Oh,vay la em ko yeu anh a!\n");
         } else {
             printf("tao se doi may!\n");
         }
-    } while (answer != 'y' && answer != 'Y');
+        count++;
+        if(count<3){
+            printf("Em chưa yêu thì sao? Anh sẽ đợi em đến khi em yêu anh thôi!\n");
+        }
+    } while (answer<3);
 
     return 0;
+}*/
+/*
+int main ()
+{
+    char ans;
+    int count=0;
+    do {
+        printf("em co lam ny anh khong: ");
+        scanf(" %c", &ans);
+        fflush(stdin);
+        count++;
+    }
+    while (ans !='y'&& count<3);
+
+    return 0;
+}*/
+int main () {
+    int count = 0;
+    float total = 0;
+    char choice;
+    float price;
+    char meal;
+
+    do {
+        printf("nhap mon: ");
+        scanf("%c", meal);
+        printf("nhap gia tien: ");
+        scanf("%f", &price);
+        total += price;
+        count++;
+        printf("Ban co muon tip tuc khong: ");
+        scanf(" %c", &choice);
+    } while (choice =='y' || choice =='Y');
+    if(count>0)
+    {
+        double total = price+count;
+        price("tong tien: %.2lf \n", total);
+    } else{
+        printf("khong co mon hoc nao duoc nhap diem. \n");
+    }
 }
+
