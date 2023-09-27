@@ -88,29 +88,31 @@ int main ()
 
     return 0;
 }*/
-int main () {
+#include <stdio.h>
+
+int main() {
     int count = 0;
     float total = 0;
     char choice;
     float price;
-    char meal;
+    char meal[50];
 
     do {
-        printf("nhap mon: ");
-        scanf("%c", meal);
-        printf("nhap gia tien: ");
+        printf("Nhap mon an: ");
+        scanf("%s", meal);
+        printf("Nhap gia tien: ");
         scanf("%f", &price);
         total += price;
         count++;
-        printf("Ban co muon tip tuc khong: ");
+        printf("Ban co muon tiep tuc khong? (y/n): ");
         scanf(" %c", &choice);
-    } while (choice =='y' || choice =='Y');
-    if(count>0)
-    {
-        double total = price+count;
-        price("tong tien: %.2lf \n", total);
-    } else{
-        printf("khong co mon hoc nao duoc nhap diem. \n");
-    }
-}
+    } while (choice == 'y' || choice == 'Y');
 
+    if (count > 0) {
+        printf("Tong tien: %.2f \n", total);
+    } else {
+        printf("Khong co mon an nao duoc nhap gia tien.\n");
+    }
+
+    return 0;
+}
